@@ -1,6 +1,8 @@
-#include<iostream>
-using namespace std;
+#include "headersAndDefs\exampleSensorCommands.h"
+
  int main(){
-    cout << "Hello ASME from Ethan "<<endl;
-    return 0;
+   ExampleSensor sensor;
+   double test = sensor.get();
+   std::cout  << test;
+   sensor.send(0,1);
  }
