@@ -6,16 +6,16 @@ int main() {
     wiringPiSetup();
 
     // Set GPIO pin 7 as input (WiringPi pin number)
-    int pin = 7;
-    pinMode(pin, INPUT);
-
-    while (true) {
+    
+    pinMode(2, INPUT);
+    for (::)
+     {
         // Read the digital signal
-        int value = digitalRead(pin);
+        int value = digitalWrite(2,HIGH);
         if (value == HIGH) {
-            std::cout << "Pin 7 is HIGH" << std::endl;
+            std::cout << "Pin 2 is HIGH" << std::endl;
         } else {
-            std::cout << "Pin 7 is LOW" << std::endl;
+            std::cout << "Pin 2 is LOW" << std::endl;
         }
         delay(100); // Delay to avoid excessive printing
     }
