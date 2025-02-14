@@ -38,5 +38,4 @@ int sensor2( int state , int ms){
       }
       
     return(state);
-
 }
