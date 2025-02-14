@@ -1,7 +1,7 @@
 #include <wiringPi.h>
 #include <iostream>
 using namespace std; 
-  int snsor2(int state, int ms);
+  int sensor2(int state, int ms);
 
 int main() {
     // Initialize WiringPi and set up the pin numbering
@@ -13,7 +13,7 @@ int main() {
 
     ms=pinMode( 8, INPUT);  // the senors signal line
   /*___Fuctions details___*/     
-   int  motion= snsor2( state,ms);
+   int  motion= sensor2( state,ms);
  /*_____ what happes____*/
   cout <<" the state is: "<< state  <<endl;
         delay(100); // Delay to avoid excessive printing
