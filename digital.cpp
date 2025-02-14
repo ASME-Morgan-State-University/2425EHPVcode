@@ -11,7 +11,7 @@ int main() {
     int state = 0;
    /* __Inputs/Outputs__ */
 
-    ms=pinMode( pin, INPUT);  // the senors signal line
+    ms=pinMode( 8, INPUT);  // the senors signal line
   /*___Fuctions details___*/     
    int  motion= snsor2( state,ms);
  /*_____ what happes____*/
