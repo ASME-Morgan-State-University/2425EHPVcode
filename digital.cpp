@@ -9,7 +9,7 @@ int main(void) {
     // Set GPIO pin 7 as input (WiringPi pin number)
       int Botton=3;
     pinMode(Botton, INPUT);
-    pullUpDNControl(Botton,PUD_UP);
+    pullUpDnControl(Botton,PUD_UP);
     int value = digitalRead(Botton);
     while (true)
     {
