@@ -16,10 +16,10 @@ int main(void) {
     {
     
      if( value == HIGH ){
-        cout << "Pin: "<<value << endl;
+        cout << "Pin:1 " << endl;
         delay(1000);
         } else if(value == LOW) {
-        cout << "Pin: "<< value <<endl;
+        cout << "Pin: 0 " <<endl;
         delay(250); // Delay to avoid excessive printing
         }
         
