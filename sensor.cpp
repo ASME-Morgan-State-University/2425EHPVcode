@@ -8,11 +8,10 @@ int main() {
     wiringPiSetup();
     /* ___variables___ */
     int mss;
-    int pi;
-    int status;
+    int pi= 2;
     int state;
    /* __Inputs/Outputs__ */
-     pi = pinMode(8, INPUT); 
+     pinMode(pi,INPUT); 
   /*___Fuctions details___*/  
    mss = sensor2(state , pi);
    /*_____ what happes____*/
@@ -29,11 +28,11 @@ int sensor2(int state, int pi){
       status = digitalRead(pi);   
       if  (status >= 0 ) {           
           cout <<" Motion detected "<<endl; 
-          state = HIGH; 
+          digitalWrite(state,HIGH);  
           delay(500);       
         }else{
             cout<< "The action/ motion has stopped"<<endl;
-            state = LOW; 
+            digitalWrite(state,LOW); 
             delay(500);      
         }
       }
