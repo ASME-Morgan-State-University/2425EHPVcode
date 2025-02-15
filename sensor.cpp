@@ -1,18 +1,20 @@
 #include <wiringPi.h>
 #include <iostream>
 using namespace std; 
-int sensor2(int state, int ms);
+int sensor2(int state, int pi);
 
 int main() {
     // Initialize WiringPi and set up the pin numbering
     wiringPiSetup();
     /* ___variables___ */
     int mss;
-    int ms;
+    int pi;
+    int status;
+    int state;
    /* __Inputs/Outputs__ */
-     ms = pinMode(8, INPUT);  // the senors signal line
+     pi = pinMode(8, INPUT); 
   /*___Fuctions details___*/  
-   mss = sensor2(state,ms);
+   mss = sensor2(state , pi);
    /*_____ what happes____*/
     cout <<" the state is: "<< state  <<endl;
    delay(100); // Delay to avoid excessive printing
@@ -21,11 +23,10 @@ int main() {
     return 0;
 }
 
-int sensor2(int ms){
-    int status;
-    int state = 0;
+int sensor2(int state, int pi){
+  int status;
       while (true){
-      status = digitalRead(ms);   
+      status = digitalRead(pi);   
       if  (status >= 0 ) {           
           cout <<" Motion detected "<<endl; 
           state = HIGH; 
