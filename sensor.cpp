@@ -13,9 +13,9 @@ int main() {
    /* __Inputs/Outputs__ */
      pinMode(pi,INPUT); 
   /*___Fuctions details___*/  
-   mss = sensor2(state , pi);
+   mss = sensor2(state);
    /*_____ what happes____*/
-    cout <<" the state is: "<< state  <<endl;
+    cout <<" the state is: "<< mss  <<endl;
    delay(100); // Delay to avoid excessive printing
     
    
