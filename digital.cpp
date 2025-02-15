@@ -15,11 +15,11 @@ int main(void) {
    while (true)
     {
     
-     if( value == HIGH ){
+     if( value == 1 ){
         cout << "Pin:1 " << endl;
         cout << value <<endl;
         delay(1000);
-        } else if(value == LOW) {
+        } else if(value == 0) {
         cout << "Pin: 0 " <<endl;
         cout<< value <<endl;
         delay(250); // Delay to avoid excessive printing
