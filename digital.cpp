@@ -10,12 +10,15 @@ int main(void) {
     
     pinMode(3, INPUT);
     int value = digitalRead(3);
-    if ( value >  HIGH ){
+    if ( value ==  HIGH ){
         cout << "Pin 2 is HIGH" << endl;
+        digitaWrite(3,HIGH);
+        delay(1000);
         } else {
         cout << "Pin 2 is LOW" <<endl;
+        digitaWrite(3,LOW);
         }
-        delay(100); // Delay to avoid excessive printing
+        delay(250); // Delay to avoid excessive printing
     
    
     return 0;
