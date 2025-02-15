@@ -7,10 +7,18 @@ int main(void) {
     wiringPiSetup();
 
     // Set GPIO pin 7 as input (WiringPi pin number)
+      int Botton=3;
+    pinMode(Botton, INPUT);
+    pullUpDNControl(Botton,PUD_UP);
+    int value = digitalRead(Botton);
+    while (true)
+    {
+       if (value == LOW){
+        cout << "it hit"<<endl;
+        delay(200);
+       }
+    }
     
-    pinMode(3, INPUT);
-    int value = digitalRead(3);
-    cout << value <<endl; 
    /* while (true)
     {
     
