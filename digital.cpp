@@ -9,7 +9,7 @@ int main(void) {
     // Set GPIO pin 7 as input (WiringPi pin number)
     
     pinMode(2, OUTPUT);
-    int value = digitalWrite(2,HIGH);
+    int value = digitalWrite(1,HIGH);
     if ( value == HIGH ){
         cout << "Pin 2 is HIGH" << endl;
         } else {
