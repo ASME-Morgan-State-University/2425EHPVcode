@@ -18,7 +18,7 @@ int main(void) {
      if( value == HIGH ){
         cout << "Pin: "<<value << endl;
         delay(1000);
-        } else if(value = LOW) {
+        } else if(value == LOW) {
         cout << "Pin: "<< value <<endl;
         delay(250); // Delay to avoid excessive printing
         }
