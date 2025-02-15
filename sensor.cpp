@@ -22,20 +22,19 @@ int main() {
 }
 
 int sensor2(int pi){
-  int status;
-  int state; 
+  int status; 
       while (true){
       status = digitalRead(pi);   
       if  (status >= 0 ) {           
           cout <<" Motion detected "<<endl; 
-          digitalWrite(state,HIGH);  
+          digitalWrite(status,HIGH);  
           delay(500);       
         }else{
             cout<< "The action/ motion has stopped"<<endl;
-            digitalWrite(state,LOW); 
+            digitalWrite(status,LOW); 
             delay(500);      
         }
       }
       
-    return(state);
+    return(status);
 }
