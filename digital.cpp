@@ -8,8 +8,8 @@ int main(void) {
 
     // Set GPIO pin 7 as input (WiringPi pin number)
     
-    pinMode(1, INPUT);
-    int value = digitalRead(1);
+    pinMode(3, INPUT);
+    int value = digitalRead(3);
     if ( value >  HIGH ){
         cout << "Pin 2 is HIGH" << endl;
         } else {
