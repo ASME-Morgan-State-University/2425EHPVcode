@@ -12,11 +12,11 @@ int main(void) {
     int value = digitalRead(3);
     if ( value ==  HIGH ){
         cout << "Pin 2 is HIGH" << endl;
-        digitaWrite(3,HIGH);
+        digitalWrite(3,HIGH);
         delay(1000);
         } else {
         cout << "Pin 2 is LOW" <<endl;
-        digitaWrite(3,LOW);
+        digitalWrite(3,LOW);
         }
         delay(250); // Delay to avoid excessive printing
     
