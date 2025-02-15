@@ -8,10 +8,11 @@ int main() {
     wiringPiSetup();
     /* ___variables___ */
     int mss;
+    int ms;
    /* __Inputs/Outputs__ */
-    ms = pinMode(8, INPUT);  // the senors signal line
+     ms = pinMode(8, INPUT);  // the senors signal line
   /*___Fuctions details___*/  
-   mss = sensor2(state, ms);
+   mss = sensor2(state,ms);
    /*_____ what happes____*/
     cout <<" the state is: "<< state  <<endl;
    delay(100); // Delay to avoid excessive printing
