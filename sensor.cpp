@@ -9,9 +9,9 @@ int main() {
     /* ___variables___ */
     int mss;
    /* __Inputs/Outputs__ */
-    ms=pinMode(8, INPUT);  // the senors signal line
+    ms = pinMode(8, INPUT);  // the senors signal line
   /*___Fuctions details___*/  
-   mss = sensor2(state,ms);
+   mss = sensor2(state, ms);
    /*_____ what happes____*/
     cout <<" the state is: "<< state  <<endl;
    delay(100); // Delay to avoid excessive printing
@@ -20,9 +20,8 @@ int main() {
     return 0;
 }
 
-int sensor2( int state , int ms){
+int sensor2(int ms){
     int status;
-    int ms;
     int state = 0;
       while (true){
       status = digitalRead(ms);   
