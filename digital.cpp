@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <iostream>
 using namespace std; 
-int main() {
+int main(void) {
     // Initialize WiringPi and set up the pin numbering
     wiringPiSetup();
 
