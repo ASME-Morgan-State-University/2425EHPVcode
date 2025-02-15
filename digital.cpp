@@ -14,11 +14,11 @@ int main(void) {
     while (true)
     {
     
-     if( value ==  HIGH ){
+     if( value == 1 ){
         cout << "Pin 2 is HIGH" << endl;
         digitalWrite(3,HIGH);
         delay(1000);
-        } else if(value == LOW) {
+        } else if(value == 0) {
         cout << "Pin 2 is LOW" <<endl;
         digitalWrite(3,LOW);
         delay(250); // Delay to avoid excessive printing
