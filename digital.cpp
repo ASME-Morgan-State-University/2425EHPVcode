@@ -11,28 +11,19 @@ int main(void) {
     pinMode(Botton, INPUT);
     pullUpDnControl(Botton,PUD_UP);
     int value = digitalRead(Botton);
-    while (true)
-    {
-       if (value == LOW){
-        cout << "it hit"<<endl;
-        delay(200);
-       }
-    }
     
-   /* while (true)
+   while (true)
     {
     
-     if( value = 1 ){
-        cout << "Pin 2 is HIGH" << endl;
-        digitalWrite(3,HIGH);
+     if( value == HIGH ){
+        cout << "Pin: "<<value << endl;
         delay(1000);
-        } else if(value = 0) {
-        cout << "Pin 2 is LOW" <<endl;
-        digitalWrite(3,LOW);
+        } else if(value = LOW) {
+        cout << "Pin: "<< value <<endl;
         delay(250); // Delay to avoid excessive printing
         }
         
-    }*/
+    }
    
     return 0;
 }
