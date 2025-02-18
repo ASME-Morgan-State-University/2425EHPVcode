@@ -14,7 +14,7 @@ int main(void) {
 
     std::cout << "Press the button to toggle the LED" << std::endl;
     while (true) {
-      if( !digitalRead(BUTTON_PIN) >= 0){
+      if( digitalWrite(BUTTON_PIN) >= 0){
       cout << "HIGH"<<endl;
       cout<< "the Button is:   " << BUTTON_PIN <<endl;
       delay(500);
