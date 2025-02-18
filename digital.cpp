@@ -12,14 +12,14 @@ int main(void) {
     pullUpDnControl(BUTTON_PIN, PUD_UP);
     int state = digitalRead(BUTTON_PIN); // Read the button state
     std::cout << "Press the button to toggle the LED" << std::endl;
-     if (state == 1){
+     
+    while(true){
+    if (state == 1){
       cout << "HIGH"<<endl;
-      
      }else { 
       cout <<"LOW"<<endl;
-     
      }
-     delay(1000);
   
+    }
     return 0;
 }
