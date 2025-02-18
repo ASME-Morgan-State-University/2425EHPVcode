@@ -25,8 +25,9 @@ int main(void) {
             std::cout << "Button released! LED off." << std::endl;
         }
 
-        delay(100); // Small delay to debounce the button
+        //delay(100); // Small delay to debounce the button
     }
+
 
     return 0;
 }
