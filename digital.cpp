@@ -17,11 +17,11 @@ int main(void) {
       if( BUTTON_PIN >= 0){
       cout << "HIGH"<<endl;
       cout<< "the Button is:   " << BUTTON_PIN <<endl;
-      delay(50);
+      delay(500);
       }else {
       cout << "LOW"<<endl;
       cout<< "the Button is:   " << BUTTON_PIN <<endl;
-      delay(50);
+      delay(500);
  
       }
 
