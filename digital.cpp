@@ -4,28 +4,29 @@
 using namespace std; 
 int main(void) {
     // Initialize WiringPi and set up the pin numbering
-    wiringPiSetup();
+    wiringPiSetupGPIO();
 
     // Set GPIO pin 7 as input (WiringPi pin number)
-      int Botton=3;
-    pinMode(Botton, INPUT);
-    pullUpDnControl(Botton,PUD_UP);
-    int value = digitalRead(Botton);
-    
-   while (true)
-    {
-    
-     if( value= 1 ){
-        cout << "Pin:1 " << endl;
-        cout << value <<endl;
-        delay(1000);
-        } else if(value=  0) {
-        cout << "Pin: 0 " <<endl;
-        cout<< value <<endl;
-        delay(250); // Delay to avoid excessive printing
+    const int BUTTON_PIN = 18; // BCM pin connected to the button
+    const int LED_PIN = 17;    // BCM pin connected to the LED
+    pinMode(BUTTON_PIN, INPUT); // Set the button pin as an input
+    pinMode(LED_PIN, OUTPUT);   // Set the LED pin as an output
+
+    std::cout << "Press the button to toggle the LED" << std::endl;
+    while (true) {
+       
+      int buttonState = digitalRead(BUTTON_PIN); // Read the button state
+
+        if (buttonState == HIGH) {
+            digitalWrite(LED_PIN, HIGH); // Turn on the LED
+            std::cout << "Button pressed! LED on." << std::endl;
+        } else {
+            digitalWrite(LED_PIN, LOW); // Turn off the LED
+            std::cout << "Button released! LED off." << std::endl;
         }
-        
+
+        delay(100); // Small delay to debounce the button
     }
-   
+
     return 0;
 }
