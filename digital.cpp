@@ -12,7 +12,7 @@ int main(void) {
     pinMode(BUTTON_PIN, INPUT); // Set the button pin as an input
     pinMode(LED_PIN, OUTPUT);   // Set the LED pin as an output
     pullUpDnControl(BUTTON_PIN, PUD_DOWN);
-    int buttonState = digitalRead(BUTTON_PIN); // Read the button state
+    digitalRead(BUTTON_PIN); // Read the button state
 
     std::cout << "Press the button to toggle the LED" << std::endl;
     while (true) {
