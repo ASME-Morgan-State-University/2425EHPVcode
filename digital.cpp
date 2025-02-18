@@ -15,7 +15,7 @@ int main(void) {
     digitalWrite(BUTTON_PIN, LOW);
     cout << "LOW"<<endl;
      delay(500);
-    while (digitalWrite(BUTTON_PIN, HIGH)) {
+    while (digitalRead(BUTTON_PIN, HIGH)) {
       digitalWrite(BUTTON_PIN, LOW);
       cout << "HIGH"<<endl;
       delay(500);
