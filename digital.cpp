@@ -17,7 +17,7 @@ int main(void) {
        
       int buttonState = digitalRead(BUTTON_PIN); // Read the button state
 
-        if (buttonState == HIGH) {
+        if (buttonState == 1) {
             digitalWrite(LED_PIN, HIGH); // Turn on the LED
             std::cout << "Button pressed! LED on." << std::endl;
         } else {
