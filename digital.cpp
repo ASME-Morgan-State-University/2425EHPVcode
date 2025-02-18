@@ -11,21 +11,13 @@ int main(void) {
     const int LED_PIN = 17;    // BCM pin connected to the LED
     pinMode(BUTTON_PIN, INPUT); // Set the button pin as an input
     pinMode(LED_PIN, OUTPUT);   // Set the LED pin as an output
+    pullUpDnControl(BUTTON_PIN, PUD_DOWN);
+    int buttonState = digitalRead(BUTTON_PIN); // Read the button state
 
     std::cout << "Press the button to toggle the LED" << std::endl;
     while (true) {
-       
-      int buttonState = digitalRead(BUTTON_PIN); // Read the button state
-
-        if (buttonState == 1) {
-            digitalWrite(LED_PIN, HIGH); // Turn on the LED
-            std::cout << "Button pressed! LED on." << std::endl;
-        } else {
-            digitalWrite(LED_PIN, LOW); // Turn off the LED
-            std::cout << "Button released! LED off." << std::endl;
-        }
-
-        //delay(100); // Small delay to debounce the button
+      digitalWrite(LED_PIN, !digitalRead(BUTTON_PIN));
+    delay(50); // Small delay to debounce the button
     }
 
 
