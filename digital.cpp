@@ -17,7 +17,7 @@ int main(void) {
     std::cout << "Press the button to toggle the LED" << std::endl;
     while (true) {
       digitalWrite(LED_PIN, !digitalRead(BUTTON_PIN));
-      delay(50):
+      delay(50);
 
   
       }
