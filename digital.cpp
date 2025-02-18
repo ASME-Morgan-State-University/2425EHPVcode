@@ -9,11 +9,12 @@ int main(void) {
     const int BUTTON_PIN = 18;
     int arraySize=10;
     int currentIndex = 0;
+    int state[arraySize];
 
     pinMode(BUTTON_PIN, INPUT); // Set the button pin as an input
     pullUpDnControl(BUTTON_PIN, PUD_UP);
-    int state = digitalRead(BUTTON_PIN); // Read the button state
-    state(arraySize,0);
+    state = digitalRead(BUTTON_PIN); // Read the button state
+
   
 
     cout << "______Starting_____" << endl;
