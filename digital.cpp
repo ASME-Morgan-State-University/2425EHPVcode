@@ -4,7 +4,7 @@
 using namespace std; 
 int main(void) {
     // Initialize WiringPi and set up the pin numbering
-    wiringPiSetupGPIO();
+    wiringPiSetupGpio();
 
     // Set GPIO pin 7 as input (WiringPi pin number)
     const int BUTTON_PIN = 18; // BCM pin connected to the button
