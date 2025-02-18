@@ -10,20 +10,19 @@ int main(void) {
     const int BUTTON_PIN = 18; // BCM pin connected to the button
     pinMode(BUTTON_PIN, INPUT); // Set the button pin as an input
     pullUpDnControl(BUTTON_PIN, PUD_UP);
-     int reader = digitalRead(BUTTON_PIN); // Read the button state
-      cout << reader <<endl;
+    digitalRead(BUTTON_PIN); // Read the button state
     std::cout << "Press the button to toggle the LED" << std::endl;
-    /*while (true) {
-      if( digitalWrite(BUTTON_PIN) >= 0){
-      cout << "HIGH"<<endl;
-      cout<< "the Button is:   " << BUTTON_PIN <<endl;
-      delay(500);
-      }else {
+    while (true) {
+      digitalWrite(BUTTON_PIN, LOW);
       cout << "LOW"<<endl;
-      cout<< "the Button is:   " << BUTTON_PIN <<endl;
       delay(500);
+      
+      if(digitalWrite(BUTTON_PIN, HIGH)){
+      cout << "HIGH"<<endl;
+      delay(500);
+      }
  
-      }*/
+      }
 
   
       
