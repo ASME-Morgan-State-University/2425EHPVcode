@@ -13,12 +13,15 @@ int main(void) {
 
     pinMode(BUTTON_PIN, INPUT); // Set the button pin as an input
     pullUpDnControl(BUTTON_PIN, PUD_UP);
-    state = digitalRead(BUTTON_PIN); // Read the button state
-
   
 
+  
+   while (true)
+   {
+  
+   
     cout << "______Starting_____" << endl;
-
+    int state = digitalRead(BUTTON_PIN); // Read the button state
     state [currentIndex]= state;
      for (int i =0; i < arraySize; i++ ){
             if ( state[i] == 1){
@@ -30,7 +33,7 @@ int main(void) {
      
      currentIndex =(currentIndex +1) % arraySize;
      delay(100);
-  
+        }
     return 0;
     
 }
