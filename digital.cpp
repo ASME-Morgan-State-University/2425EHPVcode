@@ -16,14 +16,11 @@ int main(void) {
 
     std::cout << "Press the button to toggle the LED" << std::endl;
     while (true) {
-      if(digitalWrite(LED_PIN, !digitalRead(BUTTON_PIN))){
-        cout << "HIGH"<<endl;
-      }else{ 
-        cout <<"LOW"<<endl;
-      }
-    delay(50); // Small delay to debounce the button
-    }
+      digitalWrite(LED_PIN, !digitalRead(BUTTON_PIN));
+      delay(50):
 
+  
+      }
 
     return 0;
 }
