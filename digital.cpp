@@ -19,6 +19,7 @@ int main(void) {
       cout <<"LOW"<<endl;
      
      }
+     delay(1000);
   
     return 0;
 }
