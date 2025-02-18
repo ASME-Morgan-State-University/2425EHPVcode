@@ -14,8 +14,16 @@ int main(void) {
 
     std::cout << "Press the button to toggle the LED" << std::endl;
     while (true) {
+      if( BUTTON_PIN == HIGH){
+      cout << "HIGH"<<endl;
       cout<< "the Button is:   " << BUTTON_PIN <<endl;
       delay(50);
+      }else {
+      cout << "LOW"<<endl;
+      cout<< "the Button is:   " << BUTTON_PIN <<endl;
+      delay(50);
+ 
+      }
 
   
       }
