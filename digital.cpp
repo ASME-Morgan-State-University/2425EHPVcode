@@ -14,10 +14,10 @@ int main(void) {
     std::cout << "Press the button to toggle the LED" << std::endl;
      if (state == 1){
       cout << "HIGH"<<endl;
-      delay(20);
+      
      }else { 
       cout <<"LOW"<<endl;
-      delay(20);
+     
      }
   
     return 0;
