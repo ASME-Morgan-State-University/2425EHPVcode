@@ -1,35 +1,36 @@
-#include <wiringPi.h>
-#include <stdio.h>
 #include <iostream>
-using namespace std; 
-int main(void) {
-    // Initialize WiringPi and set up the pin numbering
-    wiringPiSetupGpio();
-
-    const int BUTTON_PIN = 18;
-    int buttonState; 
-    int numEntries;
-    
-    
-   pinMode(BUTTON_PIN, INPUT); // Set the button pin as an input
-   pullUpDnControl(BUTTON_PIN, PUD_UP);
-   buttonState = digitalRead(BUTTON_PIN);
-
-   struct Userdata
-   {
-    int buttonState;
-   }
-   Userdata(numEntries)
-   for (int i=0; i< numEntries;i++ ){
-     Userdata[i].buttonState = digitalRead(BUTTON_PIN);
-     cout<< "Button state for user"<< i + 1 << ": " <<Userdata[i].buttonState << endl;
-     delay(1000);
-    }
-    cout <<"User data entered: "<< endl;
-    for( int i=0; i < numEntries; i++){
-      cout <<" User "<< i+1 << ": name = "<< Userdata[i].name<< ", Button State = "<<Userdata[i].buttonState<<endl; 
-    }
+#include <ctime>
+#include<cstdlib>
+#include <iomanip>
+#include <cmath>
+#include <random>
+using namespace std;
+float getRandNum( float v);
+int main (){  
    
-    return 0;
-    
+       float v;
+      getRandNum(v);
+       cout<< v << endl;
+       
+   
+      
 }
+ float getRandNum( float v){
+
+   //const int sizeArray = 1;
+  // double numberArray[sizeArray];
+  double value;
+   srand(time(0));
+   std::random_device rd;
+   std::mt19937 gen(rd());    
+   float m=pow(10,2);
+   float n= round(gen() * m) / m;
+
+
+   /*for(int i = 0; i < sizeArray; i++){
+      numberArray[i] =num;
+      value = numberArray[i];
+     // cout<< fixed<<setprecision(3)<<numberArray[i]<<"   ";// Pritning the random numbers
+   }*/
+   return(n);
+  } 
